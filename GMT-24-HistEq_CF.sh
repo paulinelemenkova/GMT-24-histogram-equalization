@@ -1,6 +1,6 @@
 #!/bin/bash
 # Purpose:      Illustrate histogram equalization on topography grids
-# Here: Vanuatu and Vityaz Trench region.
+# Here: Central African Republic.
 # GMT modules:  psscale, pstext, makecpt, grdhisteq, grdimage
 # Unix progs:   rm
 #
