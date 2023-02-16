@@ -7,7 +7,7 @@
 
 exec bash
 
-gmt grdcut ETOPO1_Ice_g_gmt4.grd -R14/28/2.5/11.5 -Gcf1_relief.nc
+gmt grdcut ETOPO1_Ice_g_gmt4.grd -R14/28/2/11.5 -Gcf1_relief.nc
 #
 ps=HistCAR.ps
 gmt makecpt -Crainbow -T-11000/3000 > t.cpt
@@ -41,8 +41,8 @@ gmt grdimage out.nc -Cq.cpt -J -X3.5i -K -O \
     -Bpxg4f2a4 -Bpyg4f2a2 -Bsxg2 -Bsyg2 -BWSNe >> $ps
 gmt pscoast -R -J -Ia/thinner,blue -Na -N1/thick,white -W0.1p -Df -O -K >> $ps
 echo "24 10.3 Quadratic" | gmt pstext -R -J -O -K -F+jBL+f12p -T -Gwhite@10 -Dj0.1i >> $ps
-gmt psscale -Dx0i/-0.4i+w5i/0.15i+h+jTC+e+n -O -K -Cc.cpt -Bx1 -By+l"z@-n@-" >> $ps
-gmt psscale -Dx0i/-1.0i+w5i/0.15i+h+jTC+e+n -O -K -Cq.cpt -Bx1 -By+l"z@-q@-" >> $ps
+gmt psscale -Dx0i/-0.4i+w5i/0.15i+h+jTC+e+n -O -K -Cc.cpt -Bg0.5f0.1a1 -By+l"z@-n@-" >> $ps
+gmt psscale -Dx0i/-1.0i+w5i/0.15i+h+jTC+e+n -O -K -Cq.cpt -Bg0.5f0.2a1 -By+l"z@-q@-" >> $ps
 # Add GMT logo
 gmt logo -Dx0.0/-4.7c+o-1.0c/0.2c+w2c -O -K >> $ps
 # Add subtitle
